@@ -2,7 +2,7 @@
  * Copyright (c) 2026 Club360 UAE. All Rights Reserved.
  */
 
-import { ArrowRight, Check, CreditCard, MessageSquare, Calendar, BarChart3, Video, Target, Globe, Star, Users, TrendingUp, Shield, Clock, Zap, Database, PlayCircle, Activity, Award } from 'lucide-react';
+import { ArrowRight, Check, CreditCard, MessageSquare, Calendar, BarChart3, Video, Target, Globe, Star, Users, TrendingUp, Shield, Clock, Zap, Database, PlayCircle, Activity, Award, Waves } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
@@ -649,12 +649,37 @@ export default function Landing() {
 
           {/* Sports Icons */}
           <div className="flex flex-wrap justify-center gap-8">
-            {['Football', 'Basketball', 'Volleyball', 'Hockey', 'Tennis', 'Swimming'].map((sport) => (
-              <div key={sport} className="text-center">
-                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-2 backdrop-blur-sm">
-                  <span className="text-2xl">⚽</span>
+            {[
+              { 
+                name: 'Football', 
+                icon: <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M12 2 L16 8 L12 14 L8 8 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M12 2 L8 8 L12 14 L16 8 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" strokeWidth="1.5"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" strokeWidth="1.5"/></svg>
+              },
+              { 
+                name: 'Basketball', 
+                icon: <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10M12 2a15.3 15.3 0 0 0-4 10 15.3 15.3 0 0 0 4 10" stroke="currentColor" strokeWidth="2" fill="none"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" strokeWidth="2"/></svg>
+              },
+              { 
+                name: 'Volleyball', 
+                icon: <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M12 2 L8 6 L12 10 L16 6 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/><path d="M12 14 L8 18 L12 22 L16 18 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" strokeWidth="1.5"/></svg>
+              },
+              { 
+                name: 'Hockey', 
+                icon: <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="4" rx="2" fill="currentColor"/><path d="M6 10 L6 6 L18 6 L18 10" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M8 14 L16 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><line x1="10" y1="8" x2="14" y2="8" stroke="currentColor" strokeWidth="1.5"/></svg>
+              },
+              { 
+                name: 'Tennis', 
+                icon: <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M8 8 L16 16 M16 8 L8 16" stroke="currentColor" strokeWidth="1.5"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+              },
+              { 
+                name: 'Swimming', 
+                icon: <Waves className="w-8 h-8 text-white" />
+              },
+            ].map((sport) => (
+              <div key={sport.name} className="text-center group">
+                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-2 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                  {sport.icon}
                 </div>
-                <span className="text-sm font-semibold">{sport}</span>
+                <span className="text-sm font-semibold">{sport.name}</span>
               </div>
             ))}
           </div>
