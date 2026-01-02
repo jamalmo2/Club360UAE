@@ -1,0 +1,15 @@
+# Copyright (c) 2026 Shaheen Sports. All Rights Reserved.
+# PROPRIETARY SOFTWARE - UNAUTHORIZED COPYING PROHIBITED
+
+# Ensure line endings are consistent
+* text=auto
+
+# Protect sensitive files
+*.ts linguist-generated=false
+*.tsx linguist-generated=false
+*.js linguist-generated=false
+*.jsx linguist-generated=false
+
+# Mark as proprietary
+LICENSE linguist-language=Text
+*.md linguist-language=Markdown

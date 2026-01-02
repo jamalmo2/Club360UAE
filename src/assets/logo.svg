@@ -1,0 +1,9 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular ring representing "360 degrees" -->
+  <circle cx="20" cy="20" r="16" stroke="#D91E5C" stroke-width="3" fill="none"/>
+  <circle cx="20" cy="20" r="12" stroke="#1B5E7E" stroke-width="2" fill="none"/>
+  
+  <!-- "360" text in center -->
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="12" 
+        font-weight="bold" fill="#D91E5C" text-anchor="middle">360</text>
+</svg>
